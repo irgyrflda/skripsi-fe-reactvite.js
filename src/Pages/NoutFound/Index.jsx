@@ -1,7 +1,9 @@
+import { Empty } from 'antd';
+
 const NotFound = () => {
   return (
     <div>
-      <p>NotFound</p>
+      <Empty />
     </div>
   );
 };
