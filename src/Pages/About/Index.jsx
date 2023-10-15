@@ -1,11 +1,10 @@
-import Navbar from '../../Component/Navbar/Index';
+import CustomLayout from '../../Component/Layout/Index';
 
 const About = () => {
   return (
-    <div>
-      <Navbar />
+    <CustomLayout>
       <p>About</p>
-    </div>
+    </CustomLayout>
   );
 };
 

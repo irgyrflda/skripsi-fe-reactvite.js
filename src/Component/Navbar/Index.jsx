@@ -4,8 +4,11 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <div>
-      <nav>
-        <ul className='nav-wrapper'>
+      <nav className='nav-wrapper'>
+        <p className='text-white'>
+          <Link to={'/'}>LOGO</Link>
+        </p>
+        <ul className='nav-menues'>
           <li>
             <Link to='/'>Beranda</Link>
           </li>
@@ -13,7 +16,7 @@ const Navbar = () => {
             <Link to='/About'>About</Link>
           </li>
           <li>
-            <a href='#'>Contact</a>
+            <Link to='#'>Contact</Link>
           </li>
         </ul>
       </nav>

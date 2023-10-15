@@ -1,49 +1,47 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Hero from '../../Component/Hero/Index';
-import Navbar from '../../Component/Navbar/Index';
+import { Empty, Spin } from 'antd';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import CustomLayout from '../../Component/Layout/Index';
+import { getUnitUTRequest } from '../../store/Beranda/action';
 
 const Beranda = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleFtech = () => {
-    setLoading(true);
-    axios.get('https://asset.ut.ac.id/hrd/unit').then((res) => {
-      setData(res.data.data);
-      setLoading(false);
-    });
-  };
+  const { reducerUnitUT } = useSelector((state) => state.BerandaReducers);
 
   useEffect(() => {
-    handleFtech();
+    document.title = 'Beranda';
+    dispatch(getUnitUTRequest());
+
+    return () => {
+      document.title = 'React App';
+    };
   }, []);
 
+  console.log('reducerUnitUT', reducerUnitUT);
+
   return (
-    <div>
-      <Navbar />
-      <h1>Beranda</h1>
-      <button
-        onClick={() => {
-          handleFtech();
-        }}
-      >
-        klik
-      </button>
-
-      {loading ? 'loading' : null}
-      {data.length === 0 && loading === false ? 'kosong' : null}
-
-      {data.map((item) => {
-        return (
-          <div key={item.kode_unit_lama}>
-            <p>{item.nama_unit_lama}</p>
-          </div>
-        );
-      })}
-
-      <Hero data={data} />
-    </div>
+    <>
+      <CustomLayout>
+        <div>
+          <h5 className='text-center'>beranda</h5>
+          {reducerUnitUT.isLoading ? (
+            <Spin />
+          ) : reducerUnitUT.isLoading === false &&
+            reducerUnitUT.data.length > 0 ? (
+            <div>
+              {reducerUnitUT.data.map((item, index) => (
+                <div key={index}>
+                  <p>{item.nama_unit}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <Empty />
+          )}
+        </div>
+      </CustomLayout>
+    </>
   );
 };
 

@@ -5,13 +5,15 @@ import NotFound from './Pages/NoutFound/Index';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Beranda />} />
-        <Route path='*' element={<NotFound />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Beranda />} />
+          <Route path='*' element={<NotFound />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </Router>
+    </>
   );
 };
 
