@@ -24,7 +24,7 @@ const NotFound = () => {
             goBack();
           }}
         >
-          Go Back
+          Kembali
         </button>
       </Empty>
     </div>

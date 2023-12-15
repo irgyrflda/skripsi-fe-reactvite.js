@@ -9,7 +9,10 @@ const CustomLayout = ({ children }) => {
   return (
     <Fragment>
       <Navbar />
-      <main className='main-content'>{children}</main>
+      <main className='main-content' style={{
+        padding: 0,
+        margin: 0
+      }}>{children}</main>
       <Footer />
     </Fragment>
   );

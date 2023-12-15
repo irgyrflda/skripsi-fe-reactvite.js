@@ -1,7 +1,6 @@
 .nav-wrapper {
   display: flex;
   gap: 1rem;
-  background-color: blueviolet;
   justify-content: space-between;
   align-items: center;
   height: 8vh;
@@ -12,4 +11,7 @@
 .nav-wrapper .nav-menues {
   display: flex;
   gap: 1rem;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  font-weight: bold;
 }
