@@ -78,7 +78,7 @@ export const postBeras = (payload) => {
         type: POST_FMCDM_SUCCESS,
         payload: {
           isLoading: false,
-          data: res.data.data,
+          data: res.data,
           error: null,
         },
       });

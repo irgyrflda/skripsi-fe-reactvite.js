@@ -37,13 +37,16 @@ const Beranda = () => {
       butir_merah: values.butirMerah,
       butir_kuning: values.butirKuning,
       butir_kapur: values.butirkapur,
-      benda_asing: values.bendaAsing
+      benda_asing: values.bendaAsing,
+      butir_gabah: values.butirGabah
     }
 
+    console.log("payload => ", payload);
+
     dispatch(postBeras(payload)).then((respons) => {
-      // console.log('cek cek', respons)
+      console.log('cek cek', respons)
       if (respons.data.status === 'success') {
-        Navigate('/About')
+        Navigate('/Hasil')
       }
     })
   }
@@ -153,7 +156,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                       <Col span={12}>
@@ -167,7 +170,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -183,7 +186,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                       <Col span={12}>
@@ -197,7 +200,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -213,7 +216,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                       <Col span={12}>
@@ -227,7 +230,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -243,7 +246,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Gram" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                       <Col span={12}>
@@ -257,7 +260,7 @@ const Beranda = () => {
                             },
                           ]}
                         >
-                          <InputNumber addonAfter="Butir/100g" />
+                          <InputNumber addonAfter="%" />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -293,7 +296,7 @@ const Beranda = () => {
             </div>
             <div className="border border-2 shadow-lg rounded-lg py-20 bg-gradient-to-r from-violet-500 to-fuchsia-400  text-white">
               <p className="font-bold m-5 text-xl">Data Set Harga Rata-rata Beras</p>
-              <Button href="https://www.bps.go.id/indicator/36/500/7/harga-beras-di-penggilingan-menurut-kualitas.html" target="_blank">Klik saya!</Button>
+              <Button href="https://www.bps.go.id/id/statistics-table/2/NTAwIzI=/rata-rata-harga-beras-bulanan-di-tingkat-penggilingan-menurut-kualitas--rupiah-kg-.html" target="_blank">Klik saya!</Button>
             </div>
 
           </div>

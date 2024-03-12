@@ -16,17 +16,17 @@ const Navbar = () => {
               <ul className='nav-menues'>
                 <li>
                   <a href={
-                    (params.pathname === '/About') ? '/' : '#home'
+                    (params.pathname === '/Hasil') ? '/' : '#home'
                   }>Beranda
                   </a>
                 </li>
                 <li>
                 <a href={
-                    (params.pathname === '/About') ? '/' : '#about'
+                    (params.pathname === '/Hasil') ? '/' : '#about'
                   }>Tentang Kami</a>
                 </li>
                 <li>
-                  <Link to='/About'>Hasil</Link>
+                  <Link to='/Hasil'>Hasil</Link>
                 </li>
                 <li>
                   <Link to='#'>Contact</Link>
