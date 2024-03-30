@@ -1,3 +1,4 @@
+import LogoBeras from '../../assets/logo-beras.png';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
       <div >
         <div className="w-full bg-gradient-to-r from-sky-500 to-indigo-600 opacity-90 h-20 flex justify-between ">
           <div className="w-full lg:w-30/6 xl:w-full  h-full flex items-center px-4">
-            <img className="rounded-lg w-32" src="https://tokoberas.my.id/assets/images/logo/1686443108549.png" alt="addify logo" />
+            <img className="rounded-lg w-32" src={LogoBeras} alt="addify logo" />
           </div>
           <div className="w-full h-full flex justify-end items-center text-white">
             <nav className='nav-wrapper'>
